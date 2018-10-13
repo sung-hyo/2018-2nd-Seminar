@@ -1,0 +1,229 @@
+%\documentclass[10pt]{beamer}
+%\mode<presentation>
+
+%\usetheme{Warsaw}
+\documentclass[10pt]{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{kotex}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{\textbf{Data with storytelling}}
+\subtitle{데이터의 시각화(Data Visualization)}
+\author{SungHyo Seo}
+\institute{Department of Information and Statistics}
+
+\begin{document}
+\maketitle
+
+	\begin{frame}{Table of contents}
+ 		\tableofcontents
+	\end{frame}
+
+	\section{The What, Why}
+	\begin{frame}
+	\frametitle{What is Storytelling and Data Visualization}
+		\begin{block}{스토리텔링(Storytelling)}
+			\begin{itemize}
+				\item 단어, 이미지, 소리를 통해 이야기를 전달하는 것
+			\end{itemize}
+		\end{block}
+		\begin{block}{데이터 시각화(Data Visualization)}
+			\begin{itemize}
+				\item 데이터 분석 결과를 쉽게 이해할 수 있도록 시각적으로 표현하고 전달되는 과정
+				\item 수많은 정보들을 시각적으로 묘사하고 필요한 정보를 효율적이고 명확하게 제공
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}
+	\frametitle{데이터 스토리텔링이 필요한 이유}
+		\begin{figure}
+			\includegraphics[height=0.25\textwidth]{data_storytellers.png}
+		\end{figure}
+	\begin{itemize}
+		\item 데이터는 강력한 힘을 갖지만, 이를 이야기로 잘 전달했을 때만이 오래도록 기억에 남을 수 있다.
+		\item 데이터와 이야기가 함께 사용될 때 논리적이면서도 감성적으로 잠재고객에게 다가갈 수 있다
+		\item 데이터와 분석은 그 자체로 충분하지 않으며, 사람들이 분석을 제대로 이해할 수 있도록 하는 것이 중요하다.
+		\item 커뮤니케이션 없는 데이터는 무용지물이다
+		\item 데이터 과학자의 진짜 역할은 스토리텔링이다.
+	\end{itemize}
+	\end{frame}
+
+\begin{frame}
+\frametitle{스토리텔링하는데 시각화가 필요한 이유}
+\begin{itemize}
+
+	\item 우리의 뇌는 일상 및 업무에서 생성되거나 처리되는 방대한 양의 데이터를 모두 처리하고 이해할 수 없다.
+	\item 데이터에 숨겨진 모든 정보를 이해하지 못한 채 다양한 의사 결정을 내리게 된다.\\
+	\item 데이터를 이용한 시작적 분석은 우리의 두뇌가 기존에 해결 할 수 없었던 대량의 정보를 처리하고, 수용하고, 해석할 수 있게 해준다.
+
+\end{itemize}
+	\begin{figure}
+		\includegraphics[height=0.25\textwidth]{visual_0.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{데이터 시각화}
+\begin{itemize}
+	\item 통계분석기법으로 알 수 없는 데이터의 이야기를 이끌어내어 새로운 인사이트를 도출
+	\item 의사결정자에 맞게 시각적 목적을 설정하고 데이터의 표현에 집중
+	\item 데이터 시각화 후 스토리텔링 과정을 통해 완성
+\end{itemize}
+	\begin{figure}
+		\includegraphics[height=0.4\textwidth]{story_process.png}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{데이터 시각화 종류}
+\begin{itemize}
+	\item 크게 구분하여 시각화는 정보형과 서술형으로 구분
+\end{itemize}
+	\begin{figure}
+		\includegraphics[height=0.4\textwidth]{visualization_1.png}
+	\end{figure}
+
+\end{frame}
+
+\section{Data Visualization Example}
+\begin{frame}
+\frametitle{Information Graphics}
+	\begin{itemize}
+		\item 인포메이션 그래픽(인포그래픽, Information Graphics)
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[height=0.6\textwidth]{visual_1.jpg}
+		\includegraphics[height=0.6\textwidth]{infographic2.jpg}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{나폴레옹 진군 지도}
+\begin{itemize}
+	\item 선의 너비가 군인의 총 수
+	\item 색상은 방향(노란색: 모스크바로의 출정, 검은색: 복귀)
+	\item 중앙 아래에는 간단한 온도 라인 그래프
+\end{itemize}
+	\begin{figure}
+		\includegraphics[height=0.4\textwidth]{napolean_minard.png}
+	\end{figure}
+그 여정이 얼마나 끔찍한 참사였는지를 충격적인 그림으로 그려내고 있습니다.
+\end{frame}
+
+\begin{frame}
+\frametitle{1854년 Broad 가의 콜레라 발병 맵}
+\begin{itemize}
+	\item 콜레라로 사망한 인원 수를 도시 구역에 막대 그래프로 사용
+	\item 막대의 집중도와 길이가 어떤 특정 도시 구역의 집단을 표시
+	\item 그결과로 콜레라의 피해를 가장 많이 입은 세대들이 같은 우물을 식수로 사용하고 있다는 것을 발견
+\end{itemize}
+	\begin{figure}
+		\includegraphics[height=0.5\textwidth]{snow-cholera-map.jpg}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{크림 정쟁 당시 사망원인}
+\begin{itemize}
+	\item 1850년대에 크림 전쟁 중에 군인 사망률이 높고 계속 증가
+	\item 대부분의 사망이 열악한 병원 상태에서 기인한다는 것을 밝힘
+	\item 나선형 차트의 어두운 부분이 총 사망자 수이고, 더 어두운 부분이 전투에서 사망한 경우
+	\item 부식한 의료 조건이 많은 죽음에 원인이며 예방 가능하다는 인사이트를 얻음
+\end{itemize}
+	\begin{figure}
+		\includegraphics[height=0.4\textwidth]{nightingale-mortality.jpg}
+	\end{figure}
+\end{frame}
+
+\section{Dashboard}
+\begin{frame}
+\frametitle{Dashboard}
+	\begin{block}{Dashboard}
+	\begin{itemize}
+	\item 자동차 계기판
+	\item 다양한 데이터를 동시에 비교하고 모니터링할 수 있도록 한 공간에 표시된 여러 워크시트와 지원 정보의 모음
+	\item 다른 이름으로 진행보고서(progress report), report
+	\end{itemize}
+	\end{block}
+	
+	\begin{block}{Dashboard 필요}
+	\begin{itemize}
+	\item 제공해야할 정보를 반복적으로 전달할 필요가 있을 때
+	\item 데이터가 있는 곳과 필요로 하는 곳이 다를 때
+	\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Dashboard}
+	\begin{block}{대쉬보드 고려사항}
+	\begin{itemize}
+	\item 무슨 목적으로 누구를 위해 만드는가
+	\item 목적에 부합하는 지표는 무엇인가
+	\item 시각화,상호작용, 데이터 업데이트, 접근성
+	\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Dashboard}
+		\begin{itemize}
+			\item TABLEAU X 경기도감염병관리본부의 감염발생현황
+		\end{itemize}
+		\begin{figure}
+			\includegraphics[height=0.5\textwidth]{visual_2.png}
+		\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{대화형 정부 예산}
+\begin{itemize}
+	\item 오바마 대통령 재임 중에 작성된 이 트리맵은 미국 정부의 예산을 시각적으로 분류
+	\item 이 시각화의 특징은 전달 방식에 있음
+	\item 납세자들에게 그들의 세금이 어디로 가는지 의사소통하는 대화형 시각화를 사용했다는 점
+\end{itemize}
+	\begin{figure}
+		\includegraphics[height=0.4\textwidth]{2016_budget_visualization_safe.jpg}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{도시 셀카}
+\begin{itemize}
+	\item 데이터의 광범위한 뷰를 하나의 초국가적인 현상의 컨텍스트로 나타냄
+	\item 세계 곳곳의 12만 장의 셀카 사진을 분석
+	\item 도시별로 머리 기울기, 유행하는 포즈, 련령 및 성별 등
+\end{itemize}
+	\begin{figure}
+		\includegraphics[height=0.4\textwidth]{selfiecity.jpg}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{다가오는 모든 일식}
+	\begin{itemize}
+		\item 일식의 경로와 2080년까지 모든 미래의 일식 경로를 보여주는 대화형 지구 비주얼리제이션
+		\item 돌아가는 지구는 태양이 달에 의해 완전히 가려지는 개기 일식의 경로와, 개기 일식이 지구상에서 일어날 지점과 시점(시간은 밝거나 어두운 음영 및 마우스오버 텍스트로 표시됨)을 보여줌
+	\end{itemize}
+	\url{https://www.washingtonpost.com/graphics/national/eclipse/? utm_term=.fd1b287c6d6b}
+\end{frame}
+
+\begin{frame}
+\frametitle{데이터스토리를 보여주는 사이트}
+	\begin{itemize}
+		\item 파키스탄의 무인정찰기 ‘드론’의 민간인 피해를 보여주는 ‘out of sight, out of mind \\
+		\url{http://drones.pitchinteractive.com/}
+		\item Information is Beautiful Awards \\
+		\url{https://www.informationisbeautifulawards.com/}
+	\end{itemize}
+\end{frame}
+
+\end{document}
